@@ -1,0 +1,6 @@
+D:\Programs\Projects\BSUIR\OOP\Lab1\PizzaBases\obj\Debug\PizzaBases.csprojAssemblyReference.cache
+D:\Programs\Projects\BSUIR\OOP\Lab1\PizzaBases\obj\Debug\PizzaBases.csproj.CoreCompileInputs.cache
+D:\Programs\Projects\BSUIR\OOP\Lab1\PizzaBases\bin\Debug\PizzaBases.dll
+D:\Programs\Projects\BSUIR\OOP\Lab1\PizzaBases\bin\Debug\PizzaBases.pdb
+D:\Programs\Projects\BSUIR\OOP\Lab1\PizzaBases\obj\Debug\PizzaBases.dll
+D:\Programs\Projects\BSUIR\OOP\Lab1\PizzaBases\obj\Debug\PizzaBases.pdb

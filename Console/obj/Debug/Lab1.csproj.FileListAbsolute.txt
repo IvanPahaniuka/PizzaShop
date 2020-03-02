@@ -1,0 +1,10 @@
+D:\Programs\Projects\BSUIR\OOP\Lab1\Lab1\bin\Debug\Lab1.exe.config
+D:\Programs\Projects\BSUIR\OOP\Lab1\Lab1\bin\Debug\Lab1.exe
+D:\Programs\Projects\BSUIR\OOP\Lab1\Lab1\bin\Debug\Lab1.pdb
+D:\Programs\Projects\BSUIR\OOP\Lab1\Lab1\obj\Debug\Lab1.csprojAssemblyReference.cache
+D:\Programs\Projects\BSUIR\OOP\Lab1\Lab1\obj\Debug\Lab1.csproj.CoreCompileInputs.cache
+D:\Programs\Projects\BSUIR\OOP\Lab1\Lab1\obj\Debug\Lab1.exe
+D:\Programs\Projects\BSUIR\OOP\Lab1\Lab1\obj\Debug\Lab1.pdb
+D:\Programs\Projects\BSUIR\OOP\Lab1\Lab1\bin\Debug\PizzaBases.dll
+D:\Programs\Projects\BSUIR\OOP\Lab1\Lab1\bin\Debug\PizzaBases.pdb
+D:\Programs\Projects\BSUIR\OOP\Lab1\Lab1\obj\Debug\Lab1.csproj.CopyComplete

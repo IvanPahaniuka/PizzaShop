@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Pizza.Models.Box" Collapsed="true">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAgAAAABA=</HashCode>
+      <FileName>Models\Box.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pizza.Models.CheesePizza" Collapsed="true">
+    <Position X="1.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Pizza\CheesePizza.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pizza.Models.ItalianPizza" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Pizza\ItalianPizza.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pizza.Models.PepperoniPizza" Collapsed="true">
+    <Position X="0.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Pizza\PepperoniPizza.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pizza.Models.PineapplePizza" Collapsed="true">
+    <Position X="2.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Pizza\PineapplePizza.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pizza.Models.Pizza" Collapsed="true">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAABQAAAIAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Models\Pizza\Pizza.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pizza.Models.Builders.PizzaBuilder&lt;T&gt;" Collapsed="true">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAgAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Builders\PizzaBuilder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="Pizza.Models.Size" Collapsed="true">
+    <Position X="5.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgAAAAAAA=</HashCode>
+      <FileName>Models\Box.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
