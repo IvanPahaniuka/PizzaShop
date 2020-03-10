@@ -7,6 +7,7 @@ using System.Text;
 
 namespace Pizza.Models
 {
+    [Serializable]
     public class Pizza : INotifyPropertyChanged
     {
 
@@ -45,6 +46,7 @@ namespace Pizza.Models
             }
         }
 
+        [field:NonSerialized]
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged([CallerMemberName]string prop = "")
         {

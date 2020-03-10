@@ -6,6 +6,7 @@ using System.Text;
 
 namespace Pizza.Models
 {
+    [Serializable]
     public class ItalianPizza: PepperoniPizza
     {
         private float vegetablesMass;

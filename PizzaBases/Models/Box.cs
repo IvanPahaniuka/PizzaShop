@@ -7,6 +7,7 @@ using System.Text;
 
 namespace Pizza.Models
 {
+    [Serializable]
     public class Box: INotifyPropertyChanged
     {
         public enum BoxColor {
@@ -46,7 +47,7 @@ namespace Pizza.Models
             }
         }
 
-
+        [field:NonSerialized]
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged([CallerMemberName]string prop = "")
         {

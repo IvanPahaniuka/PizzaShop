@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace Pizza.Models
 {
+    [Serializable]
     public class Size: INotifyPropertyChanged
     {
         private float x, y;
@@ -49,7 +50,7 @@ namespace Pizza.Models
             Y = y;
         }
 
-
+        [field:NonSerialized]
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged([CallerMemberName]string prop = "")
         {

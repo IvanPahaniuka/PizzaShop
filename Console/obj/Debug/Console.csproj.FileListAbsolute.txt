@@ -18,3 +18,5 @@ D:\Programs\Projects\BSUIR\OOP\Pizza\Console\obj\Debug\Console.csproj.CoreCompil
 D:\Programs\Projects\BSUIR\OOP\Pizza\Console\obj\Debug\Console.csproj.CopyComplete
 D:\Programs\Projects\BSUIR\OOP\Pizza\Console\obj\Debug\Lab1.exe
 D:\Programs\Projects\BSUIR\OOP\Pizza\Console\obj\Debug\Lab1.pdb
+D:\Programs\Projects\BSUIR\OOP\Pizza\Console\bin\Debug\CustomSerializer.dll
+D:\Programs\Projects\BSUIR\OOP\Pizza\Console\bin\Debug\CustomSerializer.pdb

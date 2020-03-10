@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Programs\Projects\BSUIR\OOP\Lab1\UI\obj\Debug\
+D:\Programs\Projects\BSUIR\OOP\Pizza\UI\obj\Debug\
 Pizza
 none
 false
 DEBUG;TRACE
-D:\Programs\Projects\BSUIR\OOP\Lab1\UI\App.xaml
-4-1031156303
+D:\Programs\Projects\BSUIR\OOP\Pizza\UI\App.xaml
+41092758384
 
-14-1737049299
-14994885467
-Controls\EnumBox.xaml;Controls\ItemEditor.xaml;Windows\AddWindow.xaml;Windows\MainWindow.xaml;
+171674158331
+15279351593
+Controls\EnumBox.xaml;Controls\ItemEditor.xaml;Windows\Add\AddWindow.xaml;Windows\Main\MainWindow.xaml;
 
 True
 

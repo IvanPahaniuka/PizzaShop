@@ -101,6 +101,7 @@ namespace Pizza.Controls
                 var binding = new Binding();
                 binding.Path = new PropertyPath(path + property.Name);
                 binding.Mode = BindingMode.TwoWay;
+                binding.UpdateSourceTrigger = UpdateSourceTrigger.PropertyChanged;
                 textBox.SetBinding(TextBox.TextProperty, binding);
 
                 stack.Children.Add(textBox);
@@ -116,6 +117,7 @@ namespace Pizza.Controls
                 var binding = new Binding();
                 binding.Path = new PropertyPath(path + property.Name);
                 binding.Mode = BindingMode.TwoWay;
+                binding.UpdateSourceTrigger = UpdateSourceTrigger.PropertyChanged;
                 enumBox.SetBinding(EnumBox.SelectedValueProperty, binding);
 
                 stack.Children.Add(enumBox);

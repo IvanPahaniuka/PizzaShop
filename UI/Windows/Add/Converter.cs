@@ -1,20 +1,10 @@
 ﻿using Pizza.Models.Builders;
-using Pizza.UI.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Markup;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace Pizza.UI
 {
@@ -49,29 +39,6 @@ namespace Pizza.UI
         public override object ProvideValue(IServiceProvider serviceProvider)
         {
             return this;
-        }
-    }
-
-    /// <summary>
-    /// Логика взаимодействия для AddWindow.xaml
-    /// </summary>
-    public partial class AddWindow : Window
-    {
-        private readonly AddViewModel model;
-
-        public PizzaBuilder<Models.Pizza> SelectedBuilder => model.SelectedBuilder;
-
-        public AddWindow()
-        {
-            InitializeComponent();
-            
-            model = new AddViewModel();
-            DataContext = model;
-        }
-
-        private void CommandBinding_Executed(object sender, ExecutedRoutedEventArgs e)
-        {
-            DialogResult = true;
         }
     }
 }

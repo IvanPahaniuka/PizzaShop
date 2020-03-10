@@ -50,6 +50,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CustomSerializer\CustomSerializer.csproj">
+      <Project>{12fbd934-bf06-47af-80e8-1ad9d580d603}</Project>
+      <Name>CustomSerializer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PizzaBases\Pizza.csproj">
       <Project>{7323ff30-b33c-4ed4-9819-fa181465155a}</Project>
       <Name>Pizza</Name>

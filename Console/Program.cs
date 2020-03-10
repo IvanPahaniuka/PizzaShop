@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Pizza.Models;
 using Pizza.Models.Builders;
+using Pizza.CustomSerializer;
 
 namespace Pizza
 {
@@ -25,6 +26,18 @@ namespace Pizza
 
             Console.WriteLine($"Big cheese pizza: {pizza}");
             Console.WriteLine($"Medium cheese pizza: {builder.Build()}");
+
+            var dict = new Dictionary<Models.Pizza, int>();
+            dict.Add(new Models.Pizza(), 123);
+            dict.Add(new Models.CheesePizza(), 1223);
+
+            var serializer =  new CustomSerializer.CustomSerializer();
+
+            var str = serializer.Serialize(dict);
+            Console.WriteLine($"Big cheese pizza: {str}");
+            dict = serializer.Deserialize<Dictionary<Models.Pizza, int>>(str);
+
+        
             Console.ReadLine();
         }
     }

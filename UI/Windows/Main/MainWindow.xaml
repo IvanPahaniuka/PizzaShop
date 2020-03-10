@@ -8,13 +8,23 @@
         xmlns:contr="clr-namespace:Pizza.Controls"
         xmlns:md ="clr-namespace:Pizza.Models;assembly=PizzaBases"
         mc:Ignorable="d"
-        Title="Главная" Height="450" Width="800" 
+        Title="{Binding Title}"
+        Height="450" Width="800" 
         MinHeight="400" MinWidth="400">
-  <Window.CommandBindings>
-      <CommandBinding Command="New" Executed="CommandBinding_Add"/>
-      <CommandBinding Command="Delete" Executed="CommandBinding_Delete" CanExecute="CommandBinding_Delete_CanExecute"/>
-  </Window.CommandBindings>
-  <Grid>
+    <Window.CommandBindings>
+        <CommandBinding Command="New" Executed="CommandBinding_Add"/>
+        <CommandBinding Command="Delete" Executed="CommandBinding_Delete" CanExecute="CommandBinding_Delete_CanExecute"/>
+        <CommandBinding Command="Open" Executed="CommandBinding_Open"/>
+        <CommandBinding Command="Save" Executed="CommandBinding_Save"/>
+        <CommandBinding Command="SaveAs" Executed="CommandBinding_SaveAs" />
+    </Window.CommandBindings>
+    <Window.InputBindings>
+        <KeyBinding Modifiers="Ctrl+Shift" Key="S" Command="SaveAs"/>
+    </Window.InputBindings>
+    <!--<Window.Title>
+        Главная
+    </Window.Title>-->
+    <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" MinWidth="100"/>
             <ColumnDefinition Width="Auto"/>
@@ -28,6 +38,11 @@
                     VerticalAlignment="Stretch" HorizontalAlignment="Center"/>
 
         <Menu Grid.Column="0" Grid.ColumnSpan="3">
+            <MenuItem Header="Файл">
+                <MenuItem Header="Открыть..." Command="Open"/>
+                <MenuItem Header="Сохранить" Command="Save"/>
+                <MenuItem Header="Сохранить как..." Command="SaveAs" InputGestureText="Ctrl+Shift+S"/>
+            </MenuItem>
             <MenuItem Header="Элементы">
                 <MenuItem Header="Добавить" Command="New"/>
                 <MenuItem Header="Удалить" Command="Delete"/>

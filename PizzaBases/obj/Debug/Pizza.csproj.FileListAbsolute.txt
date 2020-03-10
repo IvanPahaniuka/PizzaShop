@@ -4,3 +4,9 @@ D:\Programs\Projects\BSUIR\OOP\Lab1\PizzaBases\bin\Debug\Pizza.dll
 D:\Programs\Projects\BSUIR\OOP\Lab1\PizzaBases\bin\Debug\Pizza.pdb
 D:\Programs\Projects\BSUIR\OOP\Lab1\PizzaBases\obj\Debug\Pizza.dll
 D:\Programs\Projects\BSUIR\OOP\Lab1\PizzaBases\obj\Debug\Pizza.pdb
+D:\Programs\Projects\BSUIR\OOP\Pizza\PizzaBases\bin\Debug\Pizza.dll
+D:\Programs\Projects\BSUIR\OOP\Pizza\PizzaBases\bin\Debug\Pizza.pdb
+D:\Programs\Projects\BSUIR\OOP\Pizza\PizzaBases\obj\Debug\Pizza.csprojAssemblyReference.cache
+D:\Programs\Projects\BSUIR\OOP\Pizza\PizzaBases\obj\Debug\Pizza.csproj.CoreCompileInputs.cache
+D:\Programs\Projects\BSUIR\OOP\Pizza\PizzaBases\obj\Debug\Pizza.dll
+D:\Programs\Projects\BSUIR\OOP\Pizza\PizzaBases\obj\Debug\Pizza.pdb
