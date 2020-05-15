@@ -1,0 +1,12 @@
+D:\Programs\Projects\BSUIR\OOP\Pizza\Serialization\bin\Release\Serialization.dll
+D:\Programs\Projects\BSUIR\OOP\Pizza\Serialization\bin\Release\Serialization.pdb
+D:\Programs\Projects\BSUIR\OOP\Pizza\Serialization\bin\Release\CustomSerializer.dll
+D:\Programs\Projects\BSUIR\OOP\Pizza\Serialization\bin\Release\Newtonsoft.Json.dll
+D:\Programs\Projects\BSUIR\OOP\Pizza\Serialization\bin\Release\CustomSerializer.pdb
+D:\Programs\Projects\BSUIR\OOP\Pizza\Serialization\obj\Release\Serialization.csprojAssemblyReference.cache
+D:\Programs\Projects\BSUIR\OOP\Pizza\Serialization\obj\Release\Serialization.csproj.CoreCompileInputs.cache
+D:\Programs\Projects\BSUIR\OOP\Pizza\Serialization\obj\Release\Serialization.csproj.CopyComplete
+D:\Programs\Projects\BSUIR\OOP\Pizza\Serialization\obj\Release\Serialization.dll
+D:\Programs\Projects\BSUIR\OOP\Pizza\Serialization\obj\Release\Serialization.pdb
+D:\Programs\Projects\BSUIR\OOP\Pizza\Serialization\bin\Release\Plugin.dll
+D:\Programs\Projects\BSUIR\OOP\Pizza\Serialization\bin\Release\Plugin.pdb

@@ -1,0 +1,5 @@
+D:\Programs\Projects\BSUIR\OOP\Pizza\Plugin\bin\Debug\Plugin.dll
+D:\Programs\Projects\BSUIR\OOP\Pizza\Plugin\bin\Debug\Plugin.pdb
+D:\Programs\Projects\BSUIR\OOP\Pizza\Plugin\obj\Debug\Plugin.csproj.CoreCompileInputs.cache
+D:\Programs\Projects\BSUIR\OOP\Pizza\Plugin\obj\Debug\Plugin.dll
+D:\Programs\Projects\BSUIR\OOP\Pizza\Plugin\obj\Debug\Plugin.pdb

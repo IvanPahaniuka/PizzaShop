@@ -18,8 +18,10 @@ namespace Pizza.Serialization
             using (var SR = new StreamReader(stream))
             using (var JR = new JsonTextReader(SR))
             {
-                var serializer = new Newtonsoft.Json.JsonSerializer();
-                serializer.TypeNameHandling = TypeNameHandling.All;
+                var serializer = new Newtonsoft.Json.JsonSerializer
+                {
+                    TypeNameHandling = TypeNameHandling.All
+                };
                 obj = serializer.Deserialize<T>(JR);
             }
 
@@ -31,8 +33,10 @@ namespace Pizza.Serialization
             using (var SW = new StreamWriter(stream))
             using (var JW = new JsonTextWriter(SW))
             {
-                var serializer = new Newtonsoft.Json.JsonSerializer();
-                serializer.TypeNameHandling = TypeNameHandling.All;
+                var serializer = new Newtonsoft.Json.JsonSerializer
+                {
+                    TypeNameHandling = TypeNameHandling.All
+                };
                 serializer.Serialize(JW, obj, typeof(T));
             }
         }

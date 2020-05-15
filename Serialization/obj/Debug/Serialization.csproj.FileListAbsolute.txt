@@ -8,3 +8,5 @@ D:\Programs\Projects\BSUIR\OOP\Pizza\Serialization\bin\Debug\Newtonsoft.Json.dll
 D:\Programs\Projects\BSUIR\OOP\Pizza\Serialization\obj\Debug\Serialization.csproj.CopyComplete
 D:\Programs\Projects\BSUIR\OOP\Pizza\Serialization\bin\Debug\CustomSerializer.dll
 D:\Programs\Projects\BSUIR\OOP\Pizza\Serialization\bin\Debug\CustomSerializer.pdb
+D:\Programs\Projects\BSUIR\OOP\Pizza\Serialization\bin\Debug\Plugin.dll
+D:\Programs\Projects\BSUIR\OOP\Pizza\Serialization\bin\Debug\Plugin.pdb

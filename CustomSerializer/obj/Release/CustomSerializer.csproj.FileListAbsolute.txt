@@ -1,0 +1,6 @@
+D:\Programs\Projects\BSUIR\OOP\Pizza\CustomSerializer\bin\Release\CustomSerializer.dll
+D:\Programs\Projects\BSUIR\OOP\Pizza\CustomSerializer\bin\Release\CustomSerializer.pdb
+D:\Programs\Projects\BSUIR\OOP\Pizza\CustomSerializer\obj\Release\CustomSerializer.csprojAssemblyReference.cache
+D:\Programs\Projects\BSUIR\OOP\Pizza\CustomSerializer\obj\Release\CustomSerializer.csproj.CoreCompileInputs.cache
+D:\Programs\Projects\BSUIR\OOP\Pizza\CustomSerializer\obj\Release\CustomSerializer.dll
+D:\Programs\Projects\BSUIR\OOP\Pizza\CustomSerializer\obj\Release\CustomSerializer.pdb

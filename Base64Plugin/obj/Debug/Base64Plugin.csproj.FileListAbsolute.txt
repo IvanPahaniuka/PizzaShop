@@ -1,0 +1,9 @@
+D:\Programs\Projects\BSUIR\OOP\Pizza\Base64Plugin\bin\Debug\Base64Plugin.dll
+D:\Programs\Projects\BSUIR\OOP\Pizza\Base64Plugin\bin\Debug\Base64Plugin.pdb
+D:\Programs\Projects\BSUIR\OOP\Pizza\Base64Plugin\bin\Debug\Plugin.dll
+D:\Programs\Projects\BSUIR\OOP\Pizza\Base64Plugin\bin\Debug\Plugin.pdb
+D:\Programs\Projects\BSUIR\OOP\Pizza\Base64Plugin\obj\Debug\Base64Plugin.csprojAssemblyReference.cache
+D:\Programs\Projects\BSUIR\OOP\Pizza\Base64Plugin\obj\Debug\Base64Plugin.csproj.CoreCompileInputs.cache
+D:\Programs\Projects\BSUIR\OOP\Pizza\Base64Plugin\obj\Debug\Base64Plugin.csproj.CopyComplete
+D:\Programs\Projects\BSUIR\OOP\Pizza\Base64Plugin\obj\Debug\Base64Plugin.dll
+D:\Programs\Projects\BSUIR\OOP\Pizza\Base64Plugin\obj\Debug\Base64Plugin.pdb

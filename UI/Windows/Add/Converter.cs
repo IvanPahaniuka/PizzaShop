@@ -8,21 +8,15 @@ using System.Windows.Markup;
 
 namespace Pizza.UI
 {
-    public class ValueDescription
-    {
-        public PizzaBuilder<Models.Pizza> Value { get; set; }
-        public string Description { get; set; }
-    }
-
-    [ValueConversion(typeof(IEnumerable<PizzaBuilder<Models.Pizza>>), typeof(IEnumerable<ValueDescription>))]
+    [ValueConversion(typeof(IEnumerable<PizzaBuilder>), typeof(IEnumerable<ValueDescription>))]
     public class BuildersToDescriptionConverter : MarkupExtension, IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            if (value == null || !(value is IEnumerable<PizzaBuilder<Models.Pizza>>))
+            if (value == null || !(value is IEnumerable<PizzaBuilder>))
                 return new ValueDescription[]{ };
 
-            var valueList = value as IEnumerable<PizzaBuilder<Models.Pizza>>;
+            var valueList = value as IEnumerable<PizzaBuilder>;
             var valueDescr = new List<ValueDescription>(valueList.Count());
 
             foreach (var item in valueList)

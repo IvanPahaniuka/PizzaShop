@@ -1,0 +1,6 @@
+D:\Programs\Projects\BSUIR\OOP\Pizza\Plugin\bin\Release\Plugin.dll
+D:\Programs\Projects\BSUIR\OOP\Pizza\Plugin\bin\Release\Plugin.pdb
+D:\Programs\Projects\BSUIR\OOP\Pizza\Plugin\obj\Release\Plugin.csprojAssemblyReference.cache
+D:\Programs\Projects\BSUIR\OOP\Pizza\Plugin\obj\Release\Plugin.csproj.CoreCompileInputs.cache
+D:\Programs\Projects\BSUIR\OOP\Pizza\Plugin\obj\Release\Plugin.dll
+D:\Programs\Projects\BSUIR\OOP\Pizza\Plugin\obj\Release\Plugin.pdb

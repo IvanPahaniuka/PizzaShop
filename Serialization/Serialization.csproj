@@ -43,15 +43,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Serialization\BinaryReaderExtension.cs" />
     <Compile Include="Serialization\BinarySerializer.cs" />
     <Compile Include="Serialization\CustomSerializer.cs" />
     <Compile Include="Serialization\ISerializer.cs" />
     <Compile Include="Serialization\JsonSerializer.cs" />
+    <Compile Include="Serialization\PluginSerializer.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CustomSerializer\CustomSerializer.csproj">
       <Project>{12fbd934-bf06-47af-80e8-1ad9d580d603}</Project>
       <Name>CustomSerializer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Plugin\Plugin.csproj">
+      <Project>{ce571e5b-05ce-4185-912c-e5f584288a43}</Project>
+      <Name>Plugin</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -10,7 +10,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Pizza.Models;
+using Pizza.Plugin;
 using Pizza.Serialization;
+using Pizza.Models.Builders;
 
 namespace Pizza.UI.ViewModels
 {
@@ -19,21 +21,24 @@ namespace Pizza.UI.ViewModels
     {
         public class FileDescription
         {
-            public string Filter { get; }
-            public ISerializer Serializator { get; }
+            public string Filter => $"{Name} (*.{FileExtension})|*.{FileExtension}";
+            public string Name { get; }
+            public string FileExtension { get; }
+            public ISerializer Serializer { get; }
 
-            public FileDescription(string filter, ISerializer serializator)
+            public FileDescription(string name, string fileExtension, ISerializer serializer)
             {
-                Filter = filter ?? throw new ArgumentNullException();
-                Serializator = serializator ?? throw new ArgumentNullException();
+                Name = name ?? throw new ArgumentNullException();
+                FileExtension = fileExtension ?? throw new ArgumentNullException();
+                Serializer = serializer ?? throw new ArgumentNullException();
             }
         }
 
         private object selectedItem;
         private ObservableCollection<object> items;
-        private List<FileDescription> filters;
+        private List<FileDescription> serializers;
         private string lastFile;
-        private FileDescription lastFilter;
+        private ISerializer lastSerializer;
 
         public object SelectedItem
         {
@@ -53,12 +58,12 @@ namespace Pizza.UI.ViewModels
                 OnPropertyChanged();
             }
         }
-        public List<FileDescription> Filters
+        public List<FileDescription> Serializers
         {
-            get => filters;
+            get => serializers;
             set
             {
-                filters = value;
+                serializers = value;
                 OnPropertyChanged();
             }
         }
@@ -76,36 +81,48 @@ namespace Pizza.UI.ViewModels
             get => (LastFile != null ? Path.GetFileName(LastFile) + " - " : "") + 
                     "Главная";
         }
-        public FileDescription LastFilter
+        public ISerializer LastSerializer
         {
-            get => lastFilter;
+            get => lastSerializer;
             set
             {
-                lastFilter = value;
+                lastSerializer = value;
                 OnPropertyChanged();
             }
         }
-        
+
 
         public AppViewModel()
         {
             Items = new ObservableCollection<object>();
+            
+            var serializers = new List<FileDescription>{
+                new FileDescription("Бинарный формат", "bin", new BinarySerializer()),
+                new FileDescription("JSON формат", "json", new JsonSerializer()),
+                new FileDescription("Текстовый формат", "txt", new CustomSerializer())};
 
-            Filters = new List<FileDescription>{
-                new FileDescription("Бинарный файл (*.bin)|*.bin", new BinarySerializer()),
-                new FileDescription("JSON файл (*.json)|*.json", new JsonSerializer()),
-                new FileDescription("Текстовый формат (*.txt)|*.txt", new CustomSerializer())
-                };
+            var pluginsSerializer = GetPluginsSerializer(serializers.Select(s => s.Serializer).ToArray());
+            serializers.Add(new FileDescription("Модифицированный формат", "bmd", pluginsSerializer));
+
+            Serializers = serializers;
         }
 
-        public void AddItem(Models.Builders.PizzaBuilder<Models.Pizza> builder)
+        public void AddItem(PizzaBuilder builder)
         {
             Items.Add(builder.Build());
         }
-
         public void RemoveItem(object item)
         {
             Items.Remove(item);
+        }
+
+        private PluginSerializer GetPluginsSerializer(IEnumerable<ISerializer> serializers)
+        {
+            var path = Path.Combine(Environment.CurrentDirectory, "Plugins");
+            var plugins = new List<IDataPlugin>(PluginsLoader.LoadPlugins(path).OfType<IDataPlugin>());
+            plugins.Insert(0, new EmptyPlugin());
+
+            return new PluginSerializer(serializers, plugins);
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

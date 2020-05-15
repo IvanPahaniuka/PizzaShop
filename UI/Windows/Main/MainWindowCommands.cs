@@ -8,6 +8,7 @@ using System.Linq;
 using System.IO;
 using Pizza.UI.ViewModels;
 using System.Collections.ObjectModel;
+using Pizza.Plugin;
 
 namespace Pizza.UI
 {
@@ -40,25 +41,26 @@ namespace Pizza.UI
 
         private void CommandBinding_Open(object sender, ExecutedRoutedEventArgs e)
         {
-            var OF = new OpenFileDialog{
-                Filter = string.Join("|", model.Filters.Select(f => f.Filter))
-                };
+            var OF = new OpenFileDialog
+            {
+                Filter = string.Join("|", model.Serializers.Select(f => f.Filter))
+            };
 
             if (OF.ShowDialog() == true)
             {
                 using (var FS = new FileStream(OF.FileName, FileMode.Open, FileAccess.Read))
                 {
-                    //try
-                    //{
-                        model.Items = 
-                            model.Filters[OF.FilterIndex-1].Serializator.Deserialize<ObservableCollection<object>>(FS);
-                    //}
-                    //catch(Exception err)
-                    //{
-                    //    MessageBox.Show($"Ошибка открытия:\n{err.Message}", "Ошибка");
-                    //}
+                    try
+                    {
+                        model.Items =
+                            model.Serializers[OF.FilterIndex - 1].Serializer.Deserialize<ObservableCollection<object>>(FS);
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show($"Ошибка открытия:\n{err.Message}", "Ошибка");
+                    }
 
-                    model.LastFilter = model.Filters[OF.FilterIndex-1];
+                    model.LastSerializer = model.Serializers[OF.FilterIndex - 1].Serializer;
                     model.LastFile = OF.FileName;
                 }
             }
@@ -66,7 +68,13 @@ namespace Pizza.UI
 
         private void CommandBinding_Save(object sender, ExecutedRoutedEventArgs e)
         {
-            if (model.LastFile == null || model.LastFilter == null)
+            var pluginSerialzier = model.LastSerializer as PluginSerializer;
+            bool isBadPluginSerialzier = 
+                pluginSerialzier != null && 
+                (pluginSerialzier.SelectedPlugin == null || 
+                 pluginSerialzier.SelectedSerializer == null);
+
+            if (model.LastFile == null || model.LastSerializer == null || isBadPluginSerialzier)
             {
                 ApplicationCommands.SaveAs.Execute(null, this);
             }
@@ -76,13 +84,9 @@ namespace Pizza.UI
                 {
                     try
                     {
-                        model.LastFilter.Serializator.Serialize(FS, model.Items);
-                        //var dict = new Dictionary<Models.Pizza, int>();
-                        //dict.Add(new Models.Pizza(), 123);
-                        //dict.Add(new Models.CheesePizza(), 1223);
-                        //model.LastFilter.Serializator.Serialize(FS, dict);
+                        model.LastSerializer.Serialize(FS, model.Items);
                     }
-                    catch(Exception err)
+                    catch (Exception err)
                     {
                         MessageBox.Show($"Ошибка сохранения:\n{err.Message}", "Ошибка");
                     }
@@ -94,16 +98,54 @@ namespace Pizza.UI
 
         private void CommandBinding_SaveAs(object sender, ExecutedRoutedEventArgs e)
         {
-            var SF = new SaveFileDialog{
-                Filter = string.Join("|", model.Filters.Select(f => f.Filter))
-                };
+            var SF = new SaveFileDialog
+            {
+                Filter = string.Join("|", model.Serializers.Select(f => f.Filter))
+            };
 
             if (SF.ShowDialog() == true)
             {
                 model.LastFile = SF.FileName;
-                model.LastFilter = model.Filters[SF.FilterIndex-1];
-                ApplicationCommands.Save.Execute(null, this);
+                model.LastSerializer = model.Serializers[SF.FilterIndex - 1].Serializer;
+
+                if (model.LastSerializer is PluginSerializer)
+                {
+                    var FP = CreateFilePluginWindow();
+                    if (FP.ShowDialog() == true)
+                    {
+                        var serialzier = model.LastSerializer as PluginSerializer;
+                        serialzier.SelectedSerializer = FP.SelectedSerializer;
+                        serialzier.SelectedPlugin = FP.SelectedPlugin;
+                        ApplicationCommands.Save.Execute(null, this);
+                    }
+                }
+                else
+                {
+                    ApplicationCommands.Save.Execute(null, this);
+                }
             }
+        }
+
+        private FilePluginWindow CreateFilePluginWindow()
+        {
+            var serialziersDescription = model.Serializers
+                        .Select(s => new ValueDescription<ISerializer> { ValueTyped = s.Serializer, Description = s.Name })
+                        .ToArray();
+
+            var plugins = model.Serializers
+                .Select(s => s.Serializer)
+                .OfType<PluginSerializer>()
+                .Single().Plugins;
+            var pluginsDescription = plugins
+                .Select(p => new ValueDescription<IDataPlugin>
+                {
+                    ValueTyped = p,
+                    Description = p.GetType().Name.Replace("Plugin", "")
+                })
+                .ToArray();
+
+
+            return new FilePluginWindow(serialziersDescription, pluginsDescription);
         }
     }
 }

@@ -80,12 +80,22 @@ namespace Pizza.CustomSerializer
             return res;
         }
 
-
-
         public string Serialize(object obj)
         {
             return Serialize(obj, new List<SerializerObject>());
         }
+
+        public T Deserialize<T>(string str) where T : class
+        {
+            var dataObjects = LoadDataObjects(str);
+            var objects = ConvertToObjects(dataObjects);
+            InitializeArrays(objects);
+            LinkObjects(objects);
+
+            return (T)objects[0].Obj;
+        }
+
+
 
         private string Serialize(object obj, List<SerializerObject> objects)
         {
@@ -162,16 +172,6 @@ namespace Pizza.CustomSerializer
             }
 
             return sb.ToString();
-        }
-
-        public T Deserialize<T>(string str) where T : class
-        {
-            var dataObjects = LoadDataObjects(str);
-            var objects = ConvertToObjects(dataObjects);
-            InitializeArrays(objects);
-            LinkObjects(objects);
-
-            return (T)objects[0].Obj;
         }
 
         private string GetStringFromValue(List<SerializerObject> objects, PropertyInfo prop, object obj, List<string> objectsToAdd)

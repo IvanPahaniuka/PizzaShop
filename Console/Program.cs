@@ -27,9 +27,11 @@ namespace Pizza
             Console.WriteLine($"Big cheese pizza: {pizza}");
             Console.WriteLine($"Medium cheese pizza: {builder.Build()}");
 
-            var dict = new Dictionary<Models.Pizza, int>();
-            dict.Add(new Models.Pizza(), 123);
-            dict.Add(new Models.CheesePizza(), 1223);
+            var dict = new Dictionary<Models.Pizza, int>
+            {
+                { new Models.Pizza(), 123 },
+                { new CheesePizza(), 1223 }
+            };
 
             var serializer =  new CustomSerializer.CustomSerializer();
 

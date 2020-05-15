@@ -1,0 +1,9 @@
+D:\Programs\Projects\BSUIR\OOP\Pizza\Base32Plugin\bin\Release\Base32Plugin.dll
+D:\Programs\Projects\BSUIR\OOP\Pizza\Base32Plugin\bin\Release\Base32Plugin.pdb
+D:\Programs\Projects\BSUIR\OOP\Pizza\Base32Plugin\bin\Release\Plugin.dll
+D:\Programs\Projects\BSUIR\OOP\Pizza\Base32Plugin\bin\Release\Plugin.pdb
+D:\Programs\Projects\BSUIR\OOP\Pizza\Base32Plugin\obj\Release\Base32Plugin.csprojAssemblyReference.cache
+D:\Programs\Projects\BSUIR\OOP\Pizza\Base32Plugin\obj\Release\Base32Plugin.csproj.CoreCompileInputs.cache
+D:\Programs\Projects\BSUIR\OOP\Pizza\Base32Plugin\obj\Release\Base32Plugin.csproj.CopyComplete
+D:\Programs\Projects\BSUIR\OOP\Pizza\Base32Plugin\obj\Release\Base32Plugin.dll
+D:\Programs\Projects\BSUIR\OOP\Pizza\Base32Plugin\obj\Release\Base32Plugin.pdb

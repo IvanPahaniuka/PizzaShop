@@ -98,10 +98,12 @@ namespace Pizza.Controls
                 stack.Children.Add(new TextBlock { Text = name, Margin = new Thickness(5,5,5,0) });
 
                 var textBox = new TextBox{ Margin = new Thickness(5) };
-                var binding = new Binding();
-                binding.Path = new PropertyPath(path + property.Name);
-                binding.Mode = BindingMode.TwoWay;
-                binding.UpdateSourceTrigger = UpdateSourceTrigger.PropertyChanged;
+                var binding = new Binding
+                {
+                    Path = new PropertyPath(path + property.Name),
+                    Mode = BindingMode.TwoWay,
+                    UpdateSourceTrigger = UpdateSourceTrigger.PropertyChanged
+                };
                 textBox.SetBinding(TextBox.TextProperty, binding);
 
                 stack.Children.Add(textBox);
@@ -114,10 +116,12 @@ namespace Pizza.Controls
 
                 var enumBox = new EnumBox{ Type = propType, Margin = new Thickness(5) };
 
-                var binding = new Binding();
-                binding.Path = new PropertyPath(path + property.Name);
-                binding.Mode = BindingMode.TwoWay;
-                binding.UpdateSourceTrigger = UpdateSourceTrigger.PropertyChanged;
+                var binding = new Binding
+                {
+                    Path = new PropertyPath(path + property.Name),
+                    Mode = BindingMode.TwoWay,
+                    UpdateSourceTrigger = UpdateSourceTrigger.PropertyChanged
+                };
                 enumBox.SetBinding(EnumBox.SelectedValueProperty, binding);
 
                 stack.Children.Add(enumBox);

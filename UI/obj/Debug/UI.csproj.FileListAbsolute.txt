@@ -53,3 +53,7 @@ D:\Programs\Projects\BSUIR\OOP\Pizza\UI\bin\Debug\Serialization.pdb
 D:\Programs\Projects\BSUIR\OOP\Pizza\UI\bin\Debug\Newtonsoft.Json.dll
 D:\Programs\Projects\BSUIR\OOP\Pizza\UI\bin\Debug\CustomSerializer.dll
 D:\Programs\Projects\BSUIR\OOP\Pizza\UI\bin\Debug\CustomSerializer.pdb
+D:\Programs\Projects\BSUIR\OOP\Pizza\UI\bin\Debug\Plugin.dll
+D:\Programs\Projects\BSUIR\OOP\Pizza\UI\bin\Debug\Plugin.pdb
+D:\Programs\Projects\BSUIR\OOP\Pizza\UI\obj\Debug\Windows\FilePlugin\FilePluginWindow.g.cs
+D:\Programs\Projects\BSUIR\OOP\Pizza\UI\obj\Debug\Windows\FilePlugin\FilePluginWindow.baml

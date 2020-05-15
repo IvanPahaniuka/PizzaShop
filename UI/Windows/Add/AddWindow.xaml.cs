@@ -12,7 +12,7 @@ namespace Pizza.UI
     {
         private readonly AddViewModel model;
 
-        public PizzaBuilder<Models.Pizza> SelectedBuilder => model.SelectedBuilder;
+        public PizzaBuilder SelectedBuilder => model.SelectedBuilder;
 
         public AddWindow()
         {

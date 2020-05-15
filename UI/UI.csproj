@@ -63,6 +63,8 @@
     </Compile>
     <Compile Include="ViewModels\AddViewModel.cs" />
     <Compile Include="ViewModels\AppViewModel.cs" />
+    <Compile Include="ViewModels\FilePluginViewModel.cs" />
+    <Compile Include="Windows\ValueDescription.cs" />
     <Page Include="Controls\EnumBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -72,6 +74,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\Add\AddWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\FilePlugin\FilePluginWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -88,6 +94,10 @@
     </Compile>
     <Compile Include="Windows\Add\AddWindowCommands.cs" />
     <Compile Include="Windows\Add\Converter.cs" />
+    <Compile Include="Windows\FilePlugin\FilePluginCommands.cs" />
+    <Compile Include="Windows\FilePlugin\FilePluginWindow.xaml.cs">
+      <DependentUpon>FilePluginWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\Main\MainWindowCommands.cs" />
     <Compile Include="Windows\Main\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -124,6 +134,10 @@
     <ProjectReference Include="..\PizzaBases\Pizza.csproj">
       <Project>{7323ff30-b33c-4ed4-9819-fa181465155a}</Project>
       <Name>Pizza</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Plugin\Plugin.csproj">
+      <Project>{ce571e5b-05ce-4185-912c-e5f584288a43}</Project>
+      <Name>Plugin</Name>
     </ProjectReference>
     <ProjectReference Include="..\Serialization\Serialization.csproj">
       <Project>{5bee3fb3-2151-41ff-a46b-bd57659345a5}</Project>

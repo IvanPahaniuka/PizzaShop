@@ -1,0 +1,6 @@
+D:\Programs\Projects\BSUIR\OOP\Pizza\PizzaBases\bin\Release\Pizza.dll
+D:\Programs\Projects\BSUIR\OOP\Pizza\PizzaBases\bin\Release\Pizza.pdb
+D:\Programs\Projects\BSUIR\OOP\Pizza\PizzaBases\obj\Release\Pizza.csprojAssemblyReference.cache
+D:\Programs\Projects\BSUIR\OOP\Pizza\PizzaBases\obj\Release\Pizza.csproj.CoreCompileInputs.cache
+D:\Programs\Projects\BSUIR\OOP\Pizza\PizzaBases\obj\Release\Pizza.dll
+D:\Programs\Projects\BSUIR\OOP\Pizza\PizzaBases\obj\Release\Pizza.pdb
